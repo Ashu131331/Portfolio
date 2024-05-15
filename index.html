@@ -1,3 +1,7 @@
+<?php
+// Include the script to capture profile visits
+include 'fileAcces.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -171,17 +175,21 @@
 
         <ul class="navbar-list">
 
+
+			<li class="navbar-item">
+            <button class="navbar-link active" data-nav-link>Portfolio</button>
+          </li>
+		  
+		  
           <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
+            <button class="navbar-link" data-nav-link>About</button>
           </li>
 
       <!--    <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Resume</button>
           </li>
 -->
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
-          </li>
+          
 
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Blog</button>
@@ -203,7 +211,7 @@
         - #ABOUT
       -->
 
-      <article class="about  active" data-page="about">
+      <article class="about" data-page="about">
 
         <header>
           <h2 class="h2 article-title">About me</h2>
@@ -707,7 +715,7 @@
         - #PORTFOLIO
       -->
 
-      <article class="portfolio" data-page="portfolio">
+      <article class="portfolio active" data-page="portfolio">
 
         <header>
           <h2 class="h2 article-title">Portfolio</h2>
@@ -770,7 +778,25 @@
           </div>
 
           <ul class="project-list">
+		  
+			<li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
 
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/P1.png" alt="finance" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Right_Padded</h3>
+
+                <p class="project-category">Don't Make Enemy</p>
+
+              </a>
+            </li>
+			
             <li class="project-item  active" data-filter-item data-category="web development">
               <a href="#">
 
@@ -782,29 +808,27 @@
                   <img src="./assets/images/1.jpg" alt="finance" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Finance</h3>
+                <h3 class="project-title">Curiosity</h3>
 
-                <p class="project-category">JIO</p>
+                <p class="project-category">When someone decides to archive it means he is half way there</p>
 
               </a>
             </li>
 			
 			<li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
+             
 
                 <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
+                  
 
                   <img src="./assets/images/12.jfif" alt="finance" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Finance</h3>
+                <h3 class="project-title">Believe in YourSelf</h3>
 
-                <p class="project-category">JIO</p>
+                <p class="project-category">Ever tried Ever failed,No matter.Try Again,Fail again,Fail better. :- Samuel Beckett</p>
 
-              </a>
+             
             </li>
 			
 			<li class="project-item  active" data-filter-item data-category="web development">
@@ -818,9 +842,9 @@
                   <img src="./assets/images/2.png" alt="finance" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Finance</h3>
+                <h3 class="project-title">RAM</h3>
 
-                <p class="project-category">IO</p>
+                <p class="project-category">RAM</p>
 
               </a>
             </li>
@@ -836,7 +860,7 @@
                   <img src="./assets/images/3.png" alt="finance" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Finance</h3>
+                <h3 class="project-title">RAM</h3>
 
                 <p class="project-category">IO</p>
 
@@ -856,7 +880,7 @@
 
                 <h3 class="project-title">Orizon</h3>
 
-                <p class="project-category">Web development</p>
+                <p class="project-category">Cyber Security</p>
 
               </a>
             </li>
@@ -874,7 +898,7 @@
 
                 <h3 class="project-title">Orizon</h3>
 
-                <p class="project-category">Web development</p>
+                <p class="project-category">Cyber Security</p>
 
               </a>
             </li>
@@ -890,7 +914,7 @@
                   <img src="./assets/images/7.jpg" alt="finance" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Finance</h3>
+                <h3 class="project-title">Cyber Security</h3>
 
                 <p class="project-category">IO</p>
 
@@ -908,9 +932,9 @@
                   <img src="./assets/images/IMG-20240106-WA0020.jpg" alt="orizon" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Orizon</h3>
+                <h3 class="project-title">Cyber Security</h3>
 
-                <p class="project-category">Web development</p>
+                <p class="project-category">Cyber Security</p>
 
               </a>
             </li>
@@ -925,7 +949,7 @@
                   <img src="./assets/images/4.jfif" alt="orizon" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Orizon</h3>
+                <h3 class="project-title">Artificial Intelligence</h3>
 
                 <p class="project-category">Web development</p>
 
@@ -945,7 +969,7 @@
 
                 <h3 class="project-title">Wert</h3>
 
-                <p class="project-category">Web design</p>
+                <p class="project-category">Artificial Intelligence</p>
 
               </a>
             </li>
@@ -963,7 +987,7 @@
 
                 <h3 class="project-title">Orizon</h3>
 
-                <p class="project-category">Web development</p>
+                <p class="project-category">Artificial Intelligence</p>
 
               </a>
             </li>
@@ -981,7 +1005,7 @@
 
                 <h3 class="project-title">Wert</h3>
 
-                <p class="project-category">Web design</p>
+                <p class="project-category">Web</p>
 
               </a>
             </li>
@@ -1001,7 +1025,7 @@
 
                 <h3 class="project-title">Wert</h3>
 
-                <p class="project-category">Web design</p>
+                <p class="project-category">Web</p>
 
               </a>
             </li>
@@ -1021,7 +1045,25 @@
 
                 <h3 class="project-title">Wert</h3>
 
-                <p class="project-category">Web design</p>
+                <p class="project-category">Web</p>
+
+              </a>
+            </li>
+			
+						<li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/P1.jpg" alt="finance" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Right_Padded</h3>
+
+                <p class="project-category">Don't Make Enemy</p>
 
               </a>
             </li>
@@ -1041,7 +1083,7 @@
 
                 <h3 class="project-title">Wert</h3>
 
-                <p class="project-category">Web design</p>
+                <p class="project-category">JYO</p>
 
               </a>
             </li>
